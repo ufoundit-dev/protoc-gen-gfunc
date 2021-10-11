@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package test;
+
+option go_package = "github.com/ufoundit-dev/protoc-gen-func/examples/base;test";
+
+message MMMM {
+    string a = 1;
+}

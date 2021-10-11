@@ -1,7 +1,7 @@
 .PONHY: all example proto
 
 TARGET=protoc-gen-gfunc
-SRCS=$(wildcard *.go gfunc/*.go)
+SRCS=$(wildcard *.go)
 PROTOS=$(wildcard proto/gfunc/*.proto)
 PROTO_SRCS=$(addprefix gufnc/, $(patsubst %.proto, %.pb.go, $(notdir ${PROTOS})))
 
@@ -21,5 +21,5 @@ ${TARGET}: ${SRCS} ${PROTO_SRCS}
 ${PROTO_SRCS}: ${PROTOS}
 	buf generate --template proto/gfunc/buf.gen.yaml --path proto/gfunc
 
-t2:
-	buf generate --template examples/base/buf.gen.yaml --path examples/base -o examples/base/out
+clean:
+	rm -f ${TARGET}
