@@ -5,8 +5,8 @@ package test;
 option go_package = "github.com/ufoundit-dev/protoc-gen-func/examples/base;test";
 
 import "gfunc/gfunc.proto";
-option (gufnc.gfunc_file) = {
-  imports: ["fmt"]
+option (gfunc.gfunc_file) = {
+  imports: ["\"fmt\"", "_ \"io\""]
 };
 
 message ABC {

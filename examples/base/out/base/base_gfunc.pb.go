@@ -3,12 +3,17 @@
 
 package test
 
+import "fmt"
+import _ "io"
+
 // template: examples/base/base.tmpl
 func (self *ABC) TableName() string {
+	fmt.Println("test")
 	return "t_abc"
 }
 
 // template: examples/base/base.tmpl
 func (self *ABC) TableName2() string {
+	fmt.Println("test")
 	return "t_bbc"
 }
