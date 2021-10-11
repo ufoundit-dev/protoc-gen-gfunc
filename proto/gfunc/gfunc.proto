@@ -9,11 +9,16 @@ import "google/protobuf/descriptor.proto";
 // Validation rules applied at the message level
 extend google.protobuf.MessageOptions {
     // ormable will cause orm code to be generated for this message/object
-    GfuncMessageOptions gfunc = 53000;
+    GfuncMessageOptions gfunc_message = 53000;
+}
+
+extend google.protobuf.FileOptions {
+    // ormable will cause orm code to be generated for this message/object
+    GfuncFileOptions gfunc_file = 53000;
 }
 
 message GfuncMessageOptions {
-    repeated GfuncFuncOptions funcs = 1;
+    repeated GfuncFuncOptions funcs = 2;
 }
 
 message GfuncFuncOptions {
@@ -22,3 +27,6 @@ message GfuncFuncOptions {
     map<string, string> values = 3;
 }
 
+message GfuncFileOptions {
+    repeated string imports = 2;
+}

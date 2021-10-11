@@ -5,9 +5,12 @@ package test;
 option go_package = "github.com/ufoundit-dev/protoc-gen-func/examples/base;test";
 
 import "gfunc/gfunc.proto";
+option (gufnc.gfunc_file) = {
+  imports: ["fmt"]
+};
 
 message ABC {
-  option (gfunc.gfunc) = {
+  option (gfunc.gfunc_message) = {
     funcs : [
       {
         name : "TableName",
