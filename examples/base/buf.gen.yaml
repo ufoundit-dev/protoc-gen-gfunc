@@ -1,0 +1,11 @@
+version: v1
+plugins:
+  - name: go
+    out: out
+    opt:
+      - paths=source_relative
+  - name: gfunc
+    out: out
+    opt:
+      - paths=source_relative
+      - template=examples/base/base.tmpl

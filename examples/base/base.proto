@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package test;
+
+option go_package = "github.com/ufoundit-dev/protoc-gen-func/examples/base;test";
+
+import "gfunc/gfunc.proto";
+
+message ABC {
+  option (gfunc.gfunc) = {
+    funcs : [
+      {
+        name : "TableName",
+        template: "examples/base/base.tmpl",
+        values : [ {key : "name", value : "t_abc"} ]
+      },
+      {
+        name : "TableName2",
+        template: "examples/base/base.tmpl",
+        values : [ {key : "name", value : "t_bbc"} ]
+      }
+    ]
+  };
+  int32 i = 1;
+}
+
+message BBC { int32 i = 1; }

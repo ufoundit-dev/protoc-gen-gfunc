@@ -1,0 +1,13 @@
+version: v1beta1
+name: buf.build/ufoundit-dev/protoc-gen-gfunc
+build:
+  roots:
+    - proto
+deps:
+  - buf.build/beta/googleapis
+lint:
+  use:
+    - DEFAULT
+breaking:
+  use:
+    - FILE
