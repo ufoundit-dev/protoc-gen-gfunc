@@ -1,1 +1,1 @@
-# protoc-gen-func
+# protoc-gen-gfunc
