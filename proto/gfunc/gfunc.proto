@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package gfunc;
 
-option go_package = "github.com/ufoundit-dev/protoc-gen-gfunc/options;gfunc";
+option go_package = "github.com/ufoundit-dev/protoc-gen-gfunc/gfunc;gfunc";
 
 import "google/protobuf/descriptor.proto";
 
