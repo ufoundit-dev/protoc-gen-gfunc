@@ -4,7 +4,7 @@ build:
   roots:
     - proto
 deps:
-  - buf.build/beta/googleapis
+  - buf.build/googleapis/googleapis
 lint:
   use:
     - DEFAULT
